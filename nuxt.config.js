@@ -1,4 +1,5 @@
 import colors from "vuetify/es5/util/colors";
+import firebaseConfig from "./firebaseConfig";
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -76,15 +77,7 @@ export default {
   },
 
   firebase: {
-    config: {
-      apiKey: "AIzaSyDhCqlVaZ7yb-C2oKnqPwLw9AuceOdGmh4",
-      authDomain: "harstem-stats-scrapper.firebaseapp.com",
-      projectId: "harstem-stats-scrapper",
-      databaseURL: "https://harstem-stats-scrapper.firebaseio.com",
-      storageBucket: "harstem-stats-scrapper.appspot.com",
-      messagingSenderId: "825831833642",
-      appId: "1:825831833642:web:5edd3f1f916941ad3e0353"
-    },
+    config: firebaseConfig,
     terminateDatabasesAfterGenerate: true,
     services: {
       database: true,
