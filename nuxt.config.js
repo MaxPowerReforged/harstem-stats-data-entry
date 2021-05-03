@@ -4,6 +4,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
+  router: {
+    base: "/harstem-stats-data-entry/"
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - harstem-stats-data-entry",
@@ -48,7 +52,6 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ["~/assets/variables.scss"],
     theme: {
       dark: false,
       themes: {
@@ -66,7 +69,11 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    babel: {
+      plugins: [["@babel/plugin-proposal-private-methods", { loose: true }]]
+    }
+  },
 
   firebase: {
     config: {
