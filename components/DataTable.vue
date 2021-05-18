@@ -26,7 +26,7 @@
                 <v-row>
                   <v-col cols="12" sm="6" md="4">
                     <v-text-field
-                      v-model="editedItem.date"
+                      v-model.number="editedItem.date"
                       label="Match Date"
                       :rules="[v => !!v || 'This field is required']"
                     ></v-text-field>
@@ -49,7 +49,7 @@
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
                     <v-text-field
-                      v-model="editedItem.mmr"
+                      v-model.number="editedItem.mmr"
                       label="MMR"
                       :rules="[v => !!v || 'This field is required']"
                     ></v-text-field>
