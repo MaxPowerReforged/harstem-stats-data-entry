@@ -33,7 +33,7 @@
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
                     <v-select
-                      :items="['win', 'lose', 'draw']"
+                      :items="['Win', 'Lose', 'Draw']"
                       v-model="editedItem.decision"
                       label="Result"
                       :rules="[v => !!v || 'This field is required']"
@@ -169,7 +169,7 @@ export default Vue.extend({
     editedIndex: -1,
     editedItem: {
       date: 0,
-      decision: "draw",
+      decision: "Draw",
       map: "",
       mmr: 0,
       opponent: "",
@@ -179,7 +179,7 @@ export default Vue.extend({
     } as IMatchData,
     defaultItem: {
       date: 0,
-      decision: "draw",
+      decision: "Draw",
       map: "",
       mmr: 0,
       opponent: "",
